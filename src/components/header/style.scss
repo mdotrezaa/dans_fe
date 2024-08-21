@@ -1,0 +1,27 @@
+.head-title{
+    background: #446ea1;
+    color: #fff;
+}
+.head-action{
+    background: rgb(221, 221, 221);
+    form{
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr;
+        align-items: center;
+        .custom-input{
+            display: flex;
+            flex-direction: column;
+            &.checkbox{
+                flex-direction: row!important;
+                align-items: center;
+            }
+        }
+        button{
+            height: 40px;
+            max-width: 130px;
+        }
+        input{
+            height: 30px;
+        }
+    }
+}
