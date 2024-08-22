@@ -5,6 +5,7 @@ import { Button } from "reactstrap";
 import { getLists } from "../actions/dataActions";
 import Filter from "../components/filter";
 import Header from "../components/header";
+import { BsThreeDots } from "react-icons/bs";
 import "./style.scss";
 
 function Jobs() {
@@ -140,8 +141,16 @@ function Jobs() {
             </div>
           </div>
         ))}
+
+        {isLoading ? (
+          <div className="flex justify-center w-full">
+            {" "}
+            <BsThreeDots size={30} />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
-      {isLoading ? <div className="text-center w-full text-lg">...</div> : ""}
       {shouldShowMoreButton() && (
         <div className="load-more">
           <Button
